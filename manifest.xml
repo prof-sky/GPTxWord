@@ -10,7 +10,7 @@
   <HighResolutionIconUrl DefaultValue="https://prof-sky.github.io/GPTxWord/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://prof-sky.github.io/GPTxWord/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document"/>
