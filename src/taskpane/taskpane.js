@@ -5,7 +5,8 @@
 /* global document, Office, Word */
 
 //require("./keyhandling.js");
-const gptApi = require("./GPT_API.js");
+//const gptApi = require("./GPT_API.js"); //replace by js
+import * as gptApi from 'GPT_API.js';
 //require(fetch);
 
 const KEYITEM_NAME = "GPTAPI_Key";
