@@ -55,7 +55,7 @@ function showApiCallLoadingGif(makeVisible) {
 
 // --------------------- Selected Text Conversion ---------------------
 
-export async function addTextToSelection() {
+async function addTextToSelection() {
   return Word.run(async (context) => {
     /**
      * Insert your Word code here
@@ -105,7 +105,7 @@ export async function addTextToSelection() {
   });
 }
 
-export async function correctSelection() {
+async function correctSelection() {
   return Word.run(async (context) => {
     /**
      * Insert your Word code here
@@ -162,7 +162,7 @@ export async function correctSelection() {
   });
 }
 
-export async function translateSelection() {
+async function translateSelection() {
   return Word.run(async (context) => {
     /**
      * Insert your Word code here
@@ -224,7 +224,7 @@ export async function translateSelection() {
   });
 }
 
-export async function summarizeSelection() {
+async function summarizeSelection() {
   Word.run(async (context) => {
     var rangeSelected;
     var summarizedText, selectedText;
@@ -282,7 +282,7 @@ export async function summarizeSelection() {
   });
 }
 
-export async function rewriteSelection() {
+async function rewriteSelection() {
   Word.run(async (context) => {
     var rangeSelected;
     var rewrittenText, selectedText;
@@ -339,7 +339,7 @@ export async function rewriteSelection() {
   });
 }
 
-export async function executeCustomTask() {
+async function executeCustomTask() {
   Word.run(async (context) => {
     var rangeSelected;
     var customTaskText, selectedText, requestText;
@@ -492,7 +492,7 @@ function trimBase64(base64) {
 
 // ------------------CHATBOT-----------------------
 
-export async function answerQuestion() {
+async function answerQuestion() {
   showApiCallLoadingGif(true);
   var question, answer;
 
@@ -560,7 +560,7 @@ async function embedText(range, text, footnote = "", comment = "") {
 }
 
 // ------------------KEY--------------------------
-export async function addGPTKey() {
+async function addGPTKey() {
   console.log("addGPTKey called.");
   return Word.run(async (context) => {
     setApiKeyStatusLoading();
@@ -588,7 +588,7 @@ export async function addGPTKey() {
   });
 }
 
-export async function removeGPTKey() {
+async function removeGPTKey() {
   return Word.run(async (context) => {
     setApiKeyStatusLoading();
     if (await checkGPTKeyExists()) {
@@ -611,7 +611,7 @@ export async function removeGPTKey() {
   });
 }
 
-export async function verifyGPTKey() {
+async function verifyGPTKey() {
   setApiKeyStatusLoading();
   var keyValid = false;
   await Word.run(async (context) => {
@@ -647,7 +647,7 @@ export async function verifyGPTKey() {
 }
 
 // return true/false if key exists
-export async function checkGPTKeyExists() {
+async function checkGPTKeyExists() {
   var keyExists = false;
   await Word.run(async (context) => {
     const properties = context.document.properties.customProperties;
@@ -666,6 +666,6 @@ export async function checkGPTKeyExists() {
   return keyExists;
 }
 
-export async function setErrorMessage(message) {
+async function setErrorMessage(message) {
   document.getElementById("ErrorMessage").innerText = message;
 }
