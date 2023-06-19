@@ -561,6 +561,7 @@ async function embedText(range, text, footnote = "", comment = "") {
 
 // ------------------KEY--------------------------
 export async function addGPTKey() {
+  console.log("addGPTKey called.");
   return Word.run(async (context) => {
     setApiKeyStatusLoading();
     var valid, newKey;
